@@ -1,0 +1,11 @@
+/* Estou em Uma Folha de Estilos CSS*/
+h1{
+    border: 1px solid red;
+    margin: 32px;
+    padding: 24px;
+    color: purple;
+    font-size:50px;
+    background: black
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');

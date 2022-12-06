@@ -5,23 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entendendo CSS</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <!--<style> /*Comentário de Bloco <style>*/
+        h1{
+            border: 1px solid red;
+            margin: 32px;
+            padding: 24px;
+            color: purple;
+            font-size:50px;
+            background: black
+        }
+        p{
+            color:yellow;
+            font-size:20px;
+            background: black
+        }
+        
+    </style>-->
+    <!--#id .class-->
+
+    <style>
+        h1{
+            background: blue;
+        }
+        #super-title{
+            background: red;
+        }
+        h1{
+            background: green;
+        }
+        .my-title-2{
+            background: yellow;
+        }
+        strong{
+            color: blueviolet
+        }
+        .my-text strong{
+            color: aqua;
+        }
+    </style>
+
 </head>
 
-   <style> /*Comentário de Bloco <style>*/
-h1{
-    color: purple;
-    font-size:50px;
-    background: black
-}
-p{
-    color:yellow;
-    font-size:20px;
-    background: black
-}
-    </style>
 <body>
-    <h1>Eu Sou Um Título</h1>
+    <!--IN LINE(Não recomendado, contra as boas práticas de desenvolvimento): style="background:black; color: purple"-->
+    <h1 id="super-title">Eu Sou Um Título</h1>
     <h2>Subtítulo</h2>
-    <p>Sanji is the chain-smoking chef of the Straw Hat Pirate Crew.Except a single fight where he uses knives against a fellow chef. Sanji uses an array of powerful and varied kicking moves when he fights. His cooking skills are world class, and he was mentored in both cooking and fighting by Chef "Red Leg" Zeff of the Baratie. He was born in the North Blue, but grew up in the East Blue. Is trash-talking and serious, and usually gruff and impatient, especially around men. This is contrasted by his "love-cook" side, as he is very amorous around women. Sanji is completely devoted to any beautiful woman, usually losing all common sense and composure in front of them, then attempting to comically swoon them.</p>
+    <p class="my-text">Sanji is the chain-smoking chef of the Straw Hat Pirate Crew.Except a single fight where he uses knives against a fellow chef. Sanji uses an array of powerful and varied kicking moves when he fights. His cooking skills are world class, and he was mentored in both cooking and fighting by Chef "Red Leg" Zeff of the Baratie. He was born in the North Blue, but grew up in the East Blue. Is trash-talking and serious, and usually gruff and impatient, especially around men. This is contrasted by his <strong>"love-cook" side</strong>, as he is very amorous around women. Sanji is completely devoted to any beautiful woman, usually losing all common sense and composure in front of them, then attempting to comically swoon them.</p>
+
+    <!--Classificação ->> Seletor do Tipo class .-->
+    <div class="container">
+        <h1 class="my-title-2">Eu Sou Um Título</h1>
+        <p class="my-text-2">The people of the kingdom look down on the young Prince Bojji, who can neither hear nor speak. They call him <strong>"The Useless Prince"</strong> while jeering at his supposed foolishness However, while Bojji may not be physically strong, he is certainly not weak of heart. When a chance encounter with a shadow creature should have left him traumatized, it instead makes him believe that he has found a friend amidst those who only choose to notice his shortcomings. He starts meeting with Kage, the shadow, regularly, to the point where even the otherwise abrasive creature begins to warm up to him.
+        </p>
+    </div>
 </body>
 </html>

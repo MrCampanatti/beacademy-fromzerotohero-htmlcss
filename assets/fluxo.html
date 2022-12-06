@@ -1,0 +1,138 @@
+<!--
+    O Browser Determina Qual Regra Aplicar e como Aplicar, Caso Haja Diversas Regras Para o Mesmo Elemento
+
+    * O Fluxo de Leitura da Sua Folha de Estilo é de Cima para Baixo
+
+    ****IMPORTANTE CONSIDERAR****
+    
+    1.Origem da Folha de Estilo
+    2.Especificidade
+    3.Importância
+
+    **TIPOS DE ESTILOS**
+
+    inline > tag style > tag link
+
+    *Especificidade
+
+    Cálculo Matemático Desenvolvido Automaticamente Pela Regra CSS, Onde Cada Tipo de Seletor e Origem do Estilo Possuem Valores a Serem Considerados 
+
+    0. Universal Selector, Combinator e Pseudo-class (:not())
+    1. Elementos do Tipo seletor e pseudo-elementos (::before, ::after)
+    10. Classes e Atributos de Seletores ([type="radio"])
+    100. Seletor ID
+    1000. Inline
+
+    -----------------------------------------------
+
+    #At-rules
+      São Regras Relacionadas ao Comportamento do CSS, Começa com um Sinal de @ Seguido do Identificador e do Valor.
+
+      São as Seguintes:
+      @import Serve Para Incluir um CSS Externo.
+
+      @import url("http://linkexterno.com.br/style.css")
+
+      @media São as Regras Condicionais para Vários Dispositivos
+
+      @media (min-width: 365px) {
+        
+      }
+
+      @font-face é para Colocar Fontes Externas.
+
+      @font-face{
+
+      }
+
+      @keyframes Serve para as Animations do CSS.
+
+      @keyframes animationname{
+
+      }
+
+      ** Combinadores (Combinators) **
+
+      Combinadores São Utilizados Para Buscar e Combinar Seletores A Fim de Aplicar uma Estilização.
+
+      Tipos:
+
+      **Descendent Combinator**
+
+      Identificado Por Um Espaço Entre os Seletores.
+      - Busca um Elemento Dentro de Outro
+
+      body ul li
+
+      **Child Combinator**
+
+      Identificado Pelo Sinal > Entre Dois Seletores
+      - Seleciona Somente o Elemento Filho Direto do Pai
+      - Elementos Depois do Filho Direto Serão Desconsiderado
+
+      ** Adjacent Sibling Combinator **
+      Identificado Pelo Sinal de + Entre Dois Seletores
+      - Busca Somente o Elemento do Lado Direto que é Irmão Direto da Hierarquia
+-->
+<!--inline > tag style > tag link-->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+   <style>
+        /*body ul li{
+            background: green;
+            color: red
+        }
+        body section div ul li{
+            background: blue;
+            color: yellow;
+        }*/
+
+        /*body > ul{
+            background-color: red;
+        }
+        div > ul{
+            background: blue;
+        }*/
+
+        /*h1 + p{
+            color: green;
+        }*/
+        h1 ~ p{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!--<div>
+        <h1 style="background: red">Eu Sou Um Título</h1>
+    |inline > tag style > tag link|
+    </div>-->
+
+    <!--<div>
+        <p>Teste</p>
+    </div>
+    <ul>
+        <li>Testando Combinadores</li>
+    </ul>
+    <di>Outro Formato</di>
+    <section>
+        <div>
+            <ul>
+                <li>Outro Marcador</li>
+            </ul>
+        </div>
+    </section>-->
+
+    <h1>Titulo</h1>
+    <p>Mais um Paragrafo</p>
+    <button>Enviar</button>
+    <p>Outro Paragrafo</p>
+</body>
+</html>
+
